@@ -1,1 +1,0 @@
-# jpg2pdf-by-shivansh
