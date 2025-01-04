@@ -1,0 +1,176 @@
+/* General Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background: #f7f9fc;
+  color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.container {
+  text-align: center;
+  max-width: 700px;
+  width: 90%;
+  background: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+}
+
+header h1 {
+  font-size: 2.4rem;
+  margin-bottom: 10px;
+  color: #3807e9;
+}
+
+header p {
+  font-size: 1rem;
+  color: #00eeff;
+  margin-bottom: 20px;
+}
+
+.upload-area {
+  border: 2px dashed #0066cc;
+  border-radius: 10px;
+  padding: 30px;
+  cursor: pointer;
+  background: #e6f2ff;
+  transition: background 0.3s ease;
+}
+
+.upload-area:hover {
+  background: #cce0ff;
+}
+
+.upload-area p {
+  font-size: 1.2rem;
+  color: #1a2b3c;
+}
+
+.upload-area span {
+  color: #0066cc;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+#preview-container {
+  margin-top: 20px;
+}
+
+#image-count {
+  margin-bottom: 10px;
+  font-size: 1.1rem;
+  color: #333;
+}
+
+#preview {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+}
+
+#preview img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+button {
+  margin-top: 15px;
+  padding: 12px 20px;
+  font-size: 1.1rem;
+  color: #fc0606;
+  background: #17e804;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+button:hover {
+  background: #004c99;
+}
+
+button:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+}
+
+#options {
+  margin: 20px 0;
+}
+
+#status-message {
+  margin-top: 20px;
+  font-size: 1.1rem;
+  color: #ec0867;
+}
+
+footer {
+  margin-top: 20px;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+footer span {
+  color: #0066cc;
+  font-weight: bold;
+}
+
+/* Dark Theme Styles */
+body.dark-theme {
+  background: #121212;
+  color: #fff;
+}
+
+.container.dark-theme {
+  background: #333;
+  color: #fff;
+}
+
+.upload-area.dark-theme {
+  background: #444;
+  border-color: #bbb;
+}
+
+.upload-area.dark-theme:hover {
+  background: #555;
+}
+
+button.dark-theme {
+  background: #444;
+  color: #fff;
+}
+
+button.dark-theme:hover {
+  background: #666;
+}
+
+/* Dark theme button specific */
+#theme-toggle {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 1.5rem;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  color: #333;
+  transition: color 0.3s ease;
+}
+
+body.dark-theme #theme-toggle {
+  color: #fff;
+}

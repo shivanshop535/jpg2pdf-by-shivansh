@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Advanced Photo to PDF Converter</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Photo to PDF Converter- Shivansh</h1>
+      <p>Transform your photos into professional-grade PDFs in seconds.</p>
+      <button id="theme-toggle" aria-label="Toggle theme">🌙</button>
+    </header>
+
+    <main>
+      <div id="upload-area" class="upload-area">
+        <p>Drag & Drop Photos Here or <span id="click-upload">Click to Upload</span></p>
+        <input type="file" id="file-input" accept="image/*" multiple hidden>
+      </div>
+      <div id="preview-container">
+        <p id="image-count">No images uploaded.</p>
+        <div id="preview"></div>
+      </div>
+
+      <div id="options">
+        <label for="page-size">Page Size:</label>
+        <select id="page-size">
+          <option value="original">Original</option>
+          <option value="A4">A4</option>
+        </select>
+      </div>
+
+      <button id="convert-btn" disabled>Convert to PDF</button>
+      <button id="clear-btn" hidden>Clear All</button>
+
+      <div id="status-message"></div>
+      <button id="download-btn" hidden>Download PDF</button>
+    </main>
+
+    <footer>
+      <p><span>Made with ❤️ by Shivansh</span></p>
+    </footer>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/pdf-lib/dist/pdf-lib.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
