@@ -13,7 +13,6 @@ body {
   justify-content: center;
   align-items: center;
   height: 100vh;
-  overflow: hidden;
 }
 
 .container {
@@ -51,40 +50,11 @@ header p {
   background: #e0f3ff;
 }
 
-.upload-area p {
-  font-size: 1rem;
-  color: #333;
-}
-
-.upload-area span {
-  color: #0066cc;
-  font-weight: bold;
-  cursor: pointer;
-}
-
-#preview-container {
-  margin-top: 20px;
-}
-
-#image-count {
-  margin-bottom: 10px;
-  font-size: 1rem;
-  color: #666;
-}
-
-#preview {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  justify-content: center;
-}
-
 #preview img {
   width: 100px;
   height: 100px;
   object-fit: cover;
   border-radius: 10px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 button {
@@ -96,20 +66,10 @@ button {
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  transition: background 0.3s ease;
 }
 
 button:hover {
   background: #004c99;
-}
-
-button:disabled {
-  background: #ccc;
-  cursor: not-allowed;
-}
-
-#options {
-  margin: 20px 0;
 }
 
 #status-message {
@@ -118,34 +78,6 @@ button:disabled {
   color: #333;
 }
 
-#remove-watermark-section {
-  margin-top: 30px;
-  text-align: center;
-}
-
-#remove-watermark-section h2 {
-  font-size: 1.5rem;
-  color: #333;
-}
-
-#remove-watermark-section p {
-  font-size: 1rem;
-  color: #666;
-  margin-bottom: 15px;
-}
-
-#remove-watermark-btn {
-  background: #28a745;
-  margin-top: 10px;
-}
-
-footer {
+#ad-container {
   margin-top: 20px;
-  font-size: 0.9rem;
-  color: #666;
-}
-
-footer span {
-  color: #0066cc;
-  font-weight: bold;
 }
