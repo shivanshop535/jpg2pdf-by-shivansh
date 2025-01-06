@@ -4,9 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Advanced Photo to PDF Converter</title>
-  <link rel="stylesheet" href="style.css">
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
   <meta name="google-adsense-account" content="ca-pub-8429002034433439">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <div class="container">
@@ -35,33 +34,29 @@
 
       <button id="convert-btn" disabled>Convert to PDF</button>
       <button id="clear-btn" hidden>Clear All</button>
-
+      <button id="remove-watermark-btn" hidden>Remove Watermark by Watching Ad</button>
       <div id="status-message"></div>
       <button id="download-btn" hidden>Download PDF</button>
     </main>
 
-    <!-- Watermark Removal Section -->
-    <section id="remove-watermark-section">
-      <h2>Remove Watermark</h2>
-      <p>Watch an ad to remove the watermark.</p>
-      <div id="ad-container">
-        <!-- Google AdSense Ad -->
-        <ins class="adsbygoogle"
-             style="display:block"
-             data-ad-client="ca-pub-8429002034433439"
-             data-ad-slot="1234567890"
-             data-ad-format="auto"></ins>
-        <script>
-          (adsbygoogle = window.adsbygoogle || []).push({});
-        </script>
-      </div>
-      <button id="remove-watermark-btn" hidden>Proceed Without Watermark</button>
-    </section>
+    <!-- Ad Container -->
+    <div id="ad-container">
+      <ins class="adsbygoogle"
+           style="display:block; text-align:center;"
+           data-ad-client="ca-pub-8429002034433439"
+           data-ad-slot="1234567890"
+           data-ad-format="auto"
+           data-full-width-responsive="true"></ins>
+    </div>
 
     <footer>
       <p>&copy; 2025 Photo to PDF Converter. <span>Made with ❤️ by Shivansh</span></p>
     </footer>
   </div>
+
+  <!-- AdSense Script -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+
   <script src="script.js"></script>
 </body>
 </html>
