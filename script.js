@@ -30,23 +30,20 @@ function updatePreview() {
     img.src = URL.createObjectURL(file);
     preview.appendChild(img);
   });
-  imageCount.textContent = ${uploadedFiles.length} images uploaded.;
+  imageCount.textContent = `${uploadedFiles.length} images uploaded.`;
 }
 
 // Dark Theme Toggle
 themeToggleBtn.addEventListener("click", () => {
-  // Toggle dark theme class on body and container
   document.body.classList.toggle("dark-theme");
   document.querySelector(".container").classList.toggle("dark-theme");
   
-  // Change button icon based on theme
   if (document.body.classList.contains("dark-theme")) {
     themeToggleBtn.textContent = "🌞";  // Change to Sun emoji for light theme
   } else {
     themeToggleBtn.textContent = "🌙";  // Change to Moon emoji for dark theme
   }
 });
-
 
 // Convert to PDF with Watermark
 convertBtn.addEventListener("click", async () => {
