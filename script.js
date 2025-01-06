@@ -65,7 +65,7 @@ convertBtn.addEventListener("click", async () => {
     page.drawImage(pdfImage, { x: 0, y: 0, width, height });
 
     // Adding watermark text to the image
-    page.drawText("By Shivansh Photo To PDF Converter", {
+    page.drawText("By Shivansh Photo2PDF", {
       x: width - 250,
       y: 30,
       size: 12,
@@ -86,7 +86,7 @@ downloadBtn.addEventListener("click", () => {
   const url = URL.createObjectURL(pdfBlob);
   const link = document.createElement("a");
   link.href = url;
-  link.download = "photos.pdf";
+  link.download = "Photo2PDF.pdf";
   link.click();
 });
 
