@@ -29,12 +29,12 @@ body {
 header h1 {
   font-size: 2.4rem;
   margin-bottom: 10px;
-  color: #1a2b3c;
+  color: #3807e9;
 }
 
 header p {
   font-size: 1rem;
-  color: #666;
+  color: #00eeff;
   margin-bottom: 20px;
 }
 
@@ -53,7 +53,7 @@ header p {
 
 .upload-area p {
   font-size: 1.2rem;
-  color: #1a2b3c;
+  color: #047cf4;
 }
 
 .upload-area span {
@@ -91,8 +91,8 @@ button {
   margin-top: 15px;
   padding: 12px 20px;
   font-size: 1.1rem;
-  color: #fff;
-  background: #0066cc;
+  color: #fc0606;
+  background: #17e804;
   border: none;
   border-radius: 5px;
   cursor: pointer;
@@ -115,7 +115,7 @@ button:disabled {
 #status-message {
   margin-top: 20px;
   font-size: 1.1rem;
-  color: #333;
+  color: #ec0867;
 }
 
 footer {
