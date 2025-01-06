@@ -5,13 +5,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Advanced Photo to PDF Converter</title>
   <link rel="stylesheet" href="style.css">
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 </head>
 <body>
   <div class="container">
     <header>
       <h1>Advanced Photo to PDF Converter</h1>
       <p>Transform your photos into professional-grade PDFs in seconds.</p>
-      <button id="theme-toggle" aria-label="Toggle theme">🌙</button>
     </header>
 
     <main>
@@ -37,23 +37,30 @@
 
       <div id="status-message"></div>
       <button id="download-btn" hidden>Download PDF</button>
-      <button id="remove-watermark-btn" hidden>Remove Watermark (Watch Ad)</button>
     </main>
+
+    <!-- Watermark Removal Section -->
+    <section id="remove-watermark-section">
+      <h2>Remove Watermark</h2>
+      <p>Watch an ad to remove the watermark.</p>
+      <div id="ad-container">
+        <!-- Google AdSense Ad -->
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-8429002034433439"
+             data-ad-slot="1234567890"
+             data-ad-format="auto"></ins>
+        <script>
+          (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+      </div>
+      <button id="remove-watermark-btn" hidden>Proceed Without Watermark</button>
+    </section>
 
     <footer>
       <p>&copy; 2025 Photo to PDF Converter. <span>Made with ❤️ by Shivansh</span></p>
     </footer>
-
-    <!-- Simulated Ad Modal -->
-    <div id="ad-modal" class="ad-modal hidden">
-      <div class="ad-content">
-        <p>Watch this ad to remove the watermark from your PDF.</p>
-        <p id="ad-timer">Ad will end in 5 seconds...</p>
-        <button id="close-ad-btn" disabled>Close Ad</button>
-      </div>
-    </div>
   </div>
-  <script src="https://cdn.jsdelivr.net/npm/pdf-lib/dist/pdf-lib.min.js"></script>
   <script src="script.js"></script>
 </body>
 </html>
