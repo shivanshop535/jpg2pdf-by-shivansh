@@ -9,7 +9,7 @@
 <body>
   <div class="container">
     <header>
-      <h1>Photo to PDF Converter- Shivansh</h1>
+      <h1>Advanced Photo to PDF Converter</h1>
       <p>Transform your photos into professional-grade PDFs in seconds.</p>
       <button id="theme-toggle" aria-label="Toggle theme">🌙</button>
     </header>
@@ -37,11 +37,21 @@
 
       <div id="status-message"></div>
       <button id="download-btn" hidden>Download PDF</button>
+      <button id="remove-watermark-btn" hidden>Remove Watermark (Watch Ad)</button>
     </main>
 
     <footer>
-      <p><span>Made with ❤️ by Shivansh</span></p>
+      <p>&copy; 2025 Photo to PDF Converter. <span>Made with ❤️ by Shivansh</span></p>
     </footer>
+
+    <!-- Simulated Ad Modal -->
+    <div id="ad-modal" class="ad-modal hidden">
+      <div class="ad-content">
+        <p>Watch this ad to remove the watermark from your PDF.</p>
+        <p id="ad-timer">Ad will end in 5 seconds...</p>
+        <button id="close-ad-btn" disabled>Close Ad</button>
+      </div>
+    </div>
   </div>
   <script src="https://cdn.jsdelivr.net/npm/pdf-lib/dist/pdf-lib.min.js"></script>
   <script src="script.js"></script>
