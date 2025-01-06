@@ -7,7 +7,7 @@
 
 body {
   font-family: 'Arial', sans-serif;
-  background: #f7f9fc;
+  background: linear-gradient(to bottom, #8e9eab, #eef2f3);
   color: #333;
   display: flex;
   justify-content: center;
@@ -20,21 +20,21 @@ body {
   text-align: center;
   max-width: 700px;
   width: 90%;
-  background: #ffffff;
-  border-radius: 10px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  background: #fff;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
   padding: 30px;
 }
 
 header h1 {
-  font-size: 2.4rem;
+  font-size: 2.2rem;
   margin-bottom: 10px;
-  color: #3807e9;
+  color: #333;
 }
 
 header p {
   font-size: 1rem;
-  color: #00eeff;
+  color: #666;
   margin-bottom: 20px;
 }
 
@@ -43,17 +43,17 @@ header p {
   border-radius: 10px;
   padding: 30px;
   cursor: pointer;
-  background: #e6f2ff;
+  background: #f1f9ff;
   transition: background 0.3s ease;
 }
 
 .upload-area:hover {
-  background: #cce0ff;
+  background: #e0f3ff;
 }
 
 .upload-area p {
-  font-size: 1.2rem;
-  color: #1a2b3c;
+  font-size: 1rem;
+  color: #333;
 }
 
 .upload-area span {
@@ -68,8 +68,8 @@ header p {
 
 #image-count {
   margin-bottom: 10px;
-  font-size: 1.1rem;
-  color: #333;
+  font-size: 1rem;
+  color: #666;
 }
 
 #preview {
@@ -89,10 +89,10 @@ header p {
 
 button {
   margin-top: 15px;
-  padding: 12px 20px;
-  font-size: 1.1rem;
-  color: #fc0606;
-  background: #17e804;
+  padding: 10px 20px;
+  font-size: 1rem;
+  color: #fff;
+  background: #0066cc;
   border: none;
   border-radius: 5px;
   cursor: pointer;
@@ -114,8 +114,29 @@ button:disabled {
 
 #status-message {
   margin-top: 20px;
-  font-size: 1.1rem;
-  color: #ec0867;
+  font-size: 1rem;
+  color: #333;
+}
+
+#remove-watermark-section {
+  margin-top: 30px;
+  text-align: center;
+}
+
+#remove-watermark-section h2 {
+  font-size: 1.5rem;
+  color: #333;
+}
+
+#remove-watermark-section p {
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 15px;
+}
+
+#remove-watermark-btn {
+  background: #28a745;
+  margin-top: 10px;
 }
 
 footer {
@@ -127,97 +148,4 @@ footer {
 footer span {
   color: #0066cc;
   font-weight: bold;
-}
-
-/* Dark Theme Styles */
-body.dark-theme {
-  background: #121212;
-  color: #fff;
-}
-
-.container.dark-theme {
-  background: #333;
-  color: #fff;
-}
-
-.upload-area.dark-theme {
-  background: #444;
-  border-color: #bbb;
-}
-
-.upload-area.dark-theme:hover {
-  background: #555;
-}
-
-button.dark-theme {
-  background: #444;
-  color: #fff;
-}
-
-button.dark-theme:hover {
-  background: #666;
-}
-
-/* Dark theme button specific */
-#theme-toggle {
-  position: absolute;
-  top: 20px;
-  right: 20px;
-  font-size: 1.5rem;
-  background: transparent;
-  border: none;
-  cursor: pointer;
-  color: #333;
-  transition: color 0.3s ease;
-}
-
-body.dark-theme #theme-toggle {
-  color: #fff;
-}
-/* Add styles for ad modal */
-.ad-modal {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.6);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 1000;
-}
-
-.ad-content {
-  background: #fff;
-  padding: 20px;
-  border-radius: 10px;
-  text-align: center;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-}
-
-.ad-content p {
-  margin-bottom: 15px;
-  font-size: 1.2rem;
-}
-
-.ad-content button {
-  padding: 10px 20px;
-  font-size: 1rem;
-  background: #0066cc;
-  color: #fff;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background 0.3s ease;
-}
-
-.ad-content button:disabled {
-  background: #ccc;
-  cursor: not-allowed;
-}
-
-/* Hide modal initially */
-.hidden {
-  display: none;
 }
