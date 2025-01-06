@@ -5,18 +5,13 @@ const imageCount = document.getElementById("image-count");
 const convertBtn = document.getElementById("convert-btn");
 const clearBtn = document.getElementById("clear-btn");
 const downloadBtn = document.getElementById("download-btn");
-const removeWatermarkBtn = document.getElementById("remove-watermark-btn");
 const pageSizeSelect = document.getElementById("page-size");
 const statusMessage = document.getElementById("status-message");
-const themeToggleBtn = document.getElementById("theme-toggle");
-
-const adModal = document.getElementById("ad-modal");
-const adTimer = document.getElementById("ad-timer");
-const closeAdBtn = document.getElementById("close-ad-btn");
+const removeWatermarkBtn = document.getElementById("remove-watermark-btn");
+const adContainer = document.getElementById("ad-container");
 
 let uploadedFiles = [];
 let pdfBlob = null;
-let removeWatermark = false;
 
 // File Upload
 uploadArea.addEventListener("click", () => fileInput.click());
@@ -27,7 +22,6 @@ function handleFiles(files) {
   updatePreview();
   convertBtn.disabled = uploadedFiles.length === 0;
   clearBtn.hidden = uploadedFiles.length === 0;
-  removeWatermarkBtn.hidden = uploadedFiles.length === 0;
 }
 
 function updatePreview() {
@@ -40,7 +34,7 @@ function updatePreview() {
   imageCount.textContent = `${uploadedFiles.length} images uploaded.`;
 }
 
-// Convert to PDF with or without Watermark
+// Convert to PDF
 convertBtn.addEventListener("click", async () => {
   statusMessage.textContent = "Generating your PDF...";
   const pdfDoc = await PDFLib.PDFDocument.create();
@@ -58,17 +52,6 @@ convertBtn.addEventListener("click", async () => {
       pageSize === "A4" ? [595.28, 841.89] : [pdfImage.width, pdfImage.height];
     const page = pdfDoc.addPage([width, height]);
     page.drawImage(pdfImage, { x: 0, y: 0, width, height });
-
-    // Add watermark only if not removed
-    if (!removeWatermark) {
-      page.drawText("By Shivansh Photo To PDF Converter", {
-        x: width - 250,
-        y: 30,
-        size: 12,
-        color: PDFLib.rgb(0.7, 0.7, 0.7),
-        rotate: PDFLib.degrees(45),
-      });
-    }
   }
 
   const pdfBytes = await pdfDoc.save();
@@ -78,28 +61,18 @@ convertBtn.addEventListener("click", async () => {
   downloadBtn.hidden = false;
 });
 
-// Remove Watermark Feature (Ad Simulation)
+// Ad Watch Simulation
 removeWatermarkBtn.addEventListener("click", () => {
-  adModal.classList.remove("hidden");
-  let adTime = 5;
-
-  const timer = setInterval(() => {
-    adTimer.textContent = `Ad will end in ${adTime} seconds...`;
-    adTime--;
-
-    if (adTime < 0) {
-      clearInterval(timer);
-      closeAdBtn.disabled = false;
-      adTimer.textContent = "Ad finished! You can close it now.";
-    }
-  }, 1000);
+  alert("Ad watched successfully. Watermark removed!");
 });
 
-// Close Ad Modal
-closeAdBtn.addEventListener("click", () => {
-  adModal.classList.add("hidden");
-  removeWatermark = true;
-  statusMessage.textContent = "Watermark will be removed from your PDF.";
+// Download PDF
+downloadBtn.addEventListener("click", () => {
+  const url = URL.createObjectURL(pdfBlob);
+  const link = document.createElement("a");
+  link.href = url;
+  link.download = "photos.pdf";
+  link.click();
 });
 
 // Clear All
@@ -110,6 +83,5 @@ clearBtn.addEventListener("click", () => {
   convertBtn.disabled = true;
   clearBtn.hidden = true;
   downloadBtn.hidden = true;
-  removeWatermarkBtn.hidden = true;
   statusMessage.textContent = "";
 });
