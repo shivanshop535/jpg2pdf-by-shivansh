@@ -174,3 +174,50 @@ button.dark-theme:hover {
 body.dark-theme #theme-toggle {
   color: #fff;
 }
+/* Add styles for ad modal */
+.ad-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.ad-content {
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.ad-content p {
+  margin-bottom: 15px;
+  font-size: 1.2rem;
+}
+
+.ad-content button {
+  padding: 10px 20px;
+  font-size: 1rem;
+  background: #0066cc;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.ad-content button:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+}
+
+/* Hide modal initially */
+.hidden {
+  display: none;
+}
